@@ -4,7 +4,7 @@
   "description": "simple function check is even arg",
   "main": "dist/isEven.js",
   "module": "dist/isEven.js",
-  "types": "dist/isEven.d.ts",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
