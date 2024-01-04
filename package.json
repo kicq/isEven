@@ -1,11 +1,13 @@
 {
   "name": "is-event-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple function check is even arg",
   "main": "dist/isEven.js",
   "module": "dist/isEven.js",
   "types": "dist/isEven.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "type": "module",
   "scripts": {
     "test": "jest",
