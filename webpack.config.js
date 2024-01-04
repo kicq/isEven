@@ -5,12 +5,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     filename: 'isEven.js',
     library: 'GetEvenBool',
     libraryTarget: 'umd',
-    // umdNamedDefine: true,
     globalObject: 'this',
     path: path.resolve(__dirname, 'dist'),
   },
@@ -33,6 +32,11 @@ export default {
           },
         },
       },
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      }
     ],
   },
   devServer: {
@@ -40,11 +44,6 @@ export default {
     hot: true,
   },
   resolve: {
-    extensions: ['.js', '.mjs'],
+    extensions: ['.js', '.ts'],
   },
-  // plugins: [
-  //   new HtmlWebpackPlugin({
-  //     template: 'index.html', // Путь к исходному HTML-файлу
-  //   }),
-  // ],
 };
